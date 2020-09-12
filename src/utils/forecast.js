@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('unable to find, please check search settings', undefined)
         } else {
             callback(undefined, 
-                body.current.weather_descriptions[0] + ', the current temparature is ' + body.current.temperature + ' degrees, and humidity is ' + body.current.humidity + ' percent'
+                body.current.weather_descriptions[0] + ', the current temparature is ' + body.current.temperature + ' degrees, and humidity is ' + body.current.humidity + ' %'
             )
         }
     })
