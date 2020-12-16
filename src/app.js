@@ -23,7 +23,7 @@ app.use(express.static(publicDirectoryPath))
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather',
-        name: 'Aviral Shukla'
+        name: 'cvd19'
     })
 })
 
@@ -31,7 +31,7 @@ app.get('/about', (req, res) => {
     res.render('about', {
         aboutText: 'About page',
         title: 'About',
-        name: 'Aviral Shukla'
+        name: 'cvd19'
     })
 })
 
@@ -39,7 +39,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         helpText: 'This is the Help page.',
         title: 'Help',
-        name: 'Aviral Shukla'
+        name: 'cvd19'
     })
 })
 
@@ -50,7 +50,7 @@ app.get('/weather', (req, res) => {
         })
     }
     
-    geocode(req.query.address, (error,{ latitude, longitude, location}) => {
+    geocode(req.query.address, (error,{ latitude, longitude, location} ={}) => {
         if (error){
             return res.send({ error })
         }
@@ -73,7 +73,7 @@ app.get('/weather', (req, res) => {
 app.get('/help/*', (req, res)=>{
     res.render('404', {
         title: '404',
-        name: 'Aviral Shukla',
+        name: 'cvd19',
         Errormessage: 'Help article not found.'
     })
 })
@@ -81,7 +81,7 @@ app.get('/help/*', (req, res)=>{
 app.get('*', (req, res)=>{
     res.render('404', {
         title: '404',
-        name: 'Aviral Shukla',
+        name: 'cvd19',
         Errormessage: 'Page not found.'
     })
 })
